@@ -1,114 +1,79 @@
-//Include packages needed for this application
-const fs = require('fs');
+// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
 // TODO: Create an array of questions for user input
-const questions = information => {
-    return inquirer.prompt([
-        {
-            type: 'input',
-            name: 'name',
-            message: 'What is your name? (Required)',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                }
-                else {
-                    console.log('Please enter you name.')
-                    return false;
-                }
+const questions = [
+    {
+        //Github Username
+        type: 'input',
+        name: 'githubname',
+        message: 'What is your github username? (Required)',
+        validate: username => {
+            if (username) {
+                return true;
             }
-        },
-        {
-            type: 'input',
-            name: 'github',
-            message: 'Enter your Github Username (Required) :',
-            validate: githubInput => {
-                if (githubInput) {
-                    return true;
-                }
-                else {
-                    console.log('Please enter your github username.');
-                    return false;
-                }
+            else {
+                console.log('Please enter your GitHub username.');
+                return false;
             }
-        },
-        {
-            type: 'input',
-            name: 'project',
-            message: 'Enter project title (Required):',
-            validate: title => {
-                if (title) {
-                    return true;
-                }
-                else {
-                    console.log('Please enter the project title.')
-                    return false;
-                }
+        }
+    },
+    {
+        //Title of Project/readme
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of the Project? (Required)',
+        validate: title => {
+            if (title) {
+                return true;
             }
-        },
-        {
-            type: 'input',
-            name: 'description',
-            message: 'What is your project about?',
-            validate: description => {
-                if (description) {
-                    return true;
-                }
-                else {
-                    console.log('Please enter a description about your Project.');
-                    return false;
-                }
+            else {
+                console.log("Please enter a title for your Readme.");
+                return false;
             }
-        },
-        {
-            type: 'input',
-            name: 'installation',
-            message: 'How should your project be installed?',
-            validate: install => {
-                if (install) {
-                    return true;
-                }
-                else {
-                    console.log('Please enter installation instructions for your Project.');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'confirm',
-            name: 'usageInfo',
-            message: 'Would you like to enter usage information:',
-            default: true
-        },
-        {
-            type: 'input',
-            name: 'usage',
-            message: 'Please enter usage information:',
-            when: ({ usageInfo }) => usageInfo
-        },
-        {
-            type: 'checkbox',
+        }
+    },
+    {
+        //Installation
+        type: 'input',
+        name: 'install',
+        message: 'What are the steps required to install your project?',
+    },
+    {
+        //Usage 
+        type: 'input',
+        name: 'usage',
+        message: 'Provide instructions and examples of your project',
+    },
+    {
+        //Credits
+        type: 'input',
+        name: 'credits',
+        message: 'Please list your collaborators (if any) with their github links',
+    },
+    {
+        //License
+        type: 'checkbox',
+        name: 'License',
+        message: 'Please choose a license:',
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense']
+    },
+];
 
-        },
-    ]);
-}
-
-
-//Create a function to write README file
-// function writeToFile(fileName, data) {
-//     const readmeData=generatePage();
-//     fs.writeFile('./Readme.md', readmeData, err => {
-//         if (err) throw new Error(err);
-//         console.log('Page created! Check out Readme.md in this directory to see it!');
-//     })
-// }
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
 function init() {
-    questions().then(information => {
-        console.log(information);
-    });
-
+    inquirer.prompt(questions)
+        .then(userAnswers => {
+            console.log(userAnswers);
+        })
+        .catch(err => {
+            if (err) {
+                console.log(err);
+            }
+        });
 }
 
 // Function call to initialize app
