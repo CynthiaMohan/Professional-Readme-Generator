@@ -70,7 +70,7 @@ function init() {
         .then(userAnswers => {
             console.log(userAnswers);
             const pageReadme = generateReadme(userAnswers);
-            fs.writeFile('./Readme.md', pageReadme, err => {
+            fs.writeFile('./dist/Readme.md', pageReadme, err => {
                 if (err) {
                     throw new Error(err);
                 }
