@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateReadme = require('./src/page-template');
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -68,6 +69,13 @@ function init() {
     inquirer.prompt(questions)
         .then(userAnswers => {
             console.log(userAnswers);
+            const pageReadme = generateReadme(userAnswers);
+            fs.writeFile('./Readme.md', pageReadme, err => {
+                if (err) {
+                    throw new Error(err);
+                }
+                console.log('Readme created!');
+            })
         })
         .catch(err => {
             if (err) {
