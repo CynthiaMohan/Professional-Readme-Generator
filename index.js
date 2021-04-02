@@ -35,6 +35,12 @@ const questions = [
         }
     },
     {
+        //Description
+        type: 'input',
+        name: 'description',
+        message: 'What is your project about?'
+    },
+    {
         //Installation
         type: 'input',
         name: 'install',
