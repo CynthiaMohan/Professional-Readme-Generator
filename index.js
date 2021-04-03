@@ -20,6 +20,11 @@ const questions = [
         }
     },
     {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?'
+    },
+    {
         //Title of Project/readme
         type: 'input',
         name: 'title',
