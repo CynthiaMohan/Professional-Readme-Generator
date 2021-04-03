@@ -1,4 +1,4 @@
-//function that returns a license badge based on which license is passed in
+// function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
     let licenseStr = '';
     if (!license) {
@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
     else {
         for (let i = 0; i < license.length; i++) {
             const licenseBadge = license[i];
-            console.log(licenseBadge);
+            // console.log(licenseBadge);
             licenseStr += `
 ![badmath](https://img.shields.io/static/v1?label=license&message=${licenseBadge}&color=green)`;
         }
@@ -16,7 +16,7 @@ function renderLicenseBadge(license) {
     return (licenseStr);
 }
 
-//a function that returns the license link
+// a function that returns the license link
 function renderLicenseLink(license) {
     let licenseStr = '';
     if (!license) {
@@ -26,7 +26,7 @@ function renderLicenseLink(license) {
     else {
         for (let i = 0; i < license.length; i++) {
             const licenseLink = license[i];
-            console.log(licenseLink);
+            // console.log(licenseLink);
             licenseStr += `
 [${licenseLink}](https://choosealicense.com/licenses/${licenseLink})
 <br />`;
@@ -39,7 +39,7 @@ function renderLicenseLink(license) {
 function contributing(credit) {
     let creditstr = credit.split(' ');
     let retStr = '';
-    console.log(creditstr);
+    // console.log(creditstr);
     if (!credit) {
         console.log("No credits");
         return '';
@@ -72,6 +72,7 @@ function tech(technologiesUsed) {
     return (techStr);
 }
 
+const markdown = require('../utils/generateMarkdown');
 
 module.exports = data => {
     return `

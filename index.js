@@ -86,7 +86,7 @@ function writeToFile(fileName, data) { }
 function init() {
     inquirer.prompt(questions)
         .then(userAnswers => {
-            console.log(userAnswers);
+            // console.log(userAnswers);
             const pageReadme = generateReadme(userAnswers);
             fs.writeFile('./dist/Readme.md', pageReadme, err => {
                 if (err) {
