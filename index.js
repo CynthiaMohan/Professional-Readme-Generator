@@ -70,6 +70,13 @@ const questions = [
         message: 'Please choose a license:',
         choices: ['agpl-3.0', 'gpl-3.0', 'lgpl-3.0', 'mpl-2.0', 'apache-2.0', 'mit', 'bsl-1.0', 'unlicense']
     },
+    {
+        //Technologies used
+        type: 'checkbox',
+        name: 'tech',
+        message: 'What technologies did you use for this project?',
+        choices: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Nodejs', 'Bootstrap', 'Foundation']
+    },
 ];
 
 // TODO: Create a function to write README file

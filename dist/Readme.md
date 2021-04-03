@@ -1,10 +1,9 @@
 
-# Professional Readme Generator
+# Readme.md gen
 
 
 ![badmath](https://img.shields.io/static/v1?label=license&message=agpl-3.0&color=green)
-![badmath](https://img.shields.io/static/v1?label=license&message=apache-2.0&color=green)
-![badmath](https://img.shields.io/static/v1?label=license&message=mit&color=green)
+
 
 ## Description
 A command-line application that accepts user input when I am prompted for information about my application repository then a high-quality, professional README.md is generated with the title of my project and sections. 
@@ -13,7 +12,6 @@ A command-line application that accepts user input when I am prompted for inform
 
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
@@ -28,19 +26,16 @@ A command-line application that accepts user input when I am prompted for inform
 
 ## License
 
-<br />
 This Application is covered under : 
 
 [agpl-3.0](https://choosealicense.com/licenses/agpl-3.0)
 <br />
-[apache-2.0](https://choosealicense.com/licenses/apache-2.0)
-<br />
-[mit](https://choosealicense.com/licenses/mit)
-<br />
 
 
 ## Contributing
-* [](https://github.com/)
+
+* cynthia<br />
+* mohan<br />
 
 
 [Contributor Covenant](https://www.contributor-covenant.org/)
