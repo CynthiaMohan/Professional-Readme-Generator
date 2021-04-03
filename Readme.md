@@ -14,7 +14,7 @@ A command-line application that accepts user input when prompted for information
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
-* [Tests](#tests)
+* [Screenshots](#screenshots)
 * [Questions](#questions)
 
 
@@ -43,7 +43,8 @@ This Application is covered under :
 
 [Contributor Covenant](https://www.contributor-covenant.org/)
 
-## Tests
+## Screenshots
+![Screenshot](./images/screenshot.png)
 
 ## Questions
 View my Github Profile at [CynthiaMohan](http://github.com/CynthiaMohan)
