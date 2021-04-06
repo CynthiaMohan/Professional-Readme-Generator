@@ -25,6 +25,7 @@ A command-line application that accepts user input when prompted for information
 ## Usage 
 In the command line run 'node index' to begin the application.The user is then prompted to answer the questions regading github and their project details.Then the readme is generated.
 <br />
+<br />
 View the video here: https://youtu.be/E44Wp7omc0I
 <br />
 <br />
