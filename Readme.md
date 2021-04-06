@@ -27,6 +27,7 @@ In the command line run 'node index' to begin the application.The user is then p
 <br />
 View the video here: https://youtu.be/E44Wp7omc0I
 <br />
+<br />
 ![video](./gif/video.gif)
 
 ## License
